@@ -25,7 +25,30 @@ android {
     }
 }
 
+repositories {
+    mavenLocal{
+        content {
+            excludeGroup "com.facebook.react"
+        }
+    }
+    mavenCentral{
+        content {
+            excludeGroup "com.facebook.react"
+        }
+    }
+    maven {
+        // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+        url "$rootDir/../node_modules/react-native/android"
+    }
+    maven {
+        // Android JSC is installed from npm
+        url "$rootDir/../node_modules/jsc-android/dist"
+    }
+    google()
+}
+
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.adjust.sdk:adjust-android:4.30.1"
     implementation 'com.facebook.react:react-native:+'
 }

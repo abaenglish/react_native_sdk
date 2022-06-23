@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.source_files   = 'ios/*.{h,m}'
 
   s.dependency 'Adjust', '4.29.6'
-  s.dependency 'React'
+  s.dependency 'React-Core'
 end
