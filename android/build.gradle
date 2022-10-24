@@ -49,6 +49,6 @@ repositories {
 
 dependencies {
 //    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "com.adjust.sdk:adjust-android:4.30.1"
+    implementation "com.adjust.sdk:adjust-android:$versions.adjust"
     implementation 'com.facebook.react:react-native:+'
 }
